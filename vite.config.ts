@@ -5,6 +5,8 @@ import vue from '@vitejs/plugin-vue'
 
 //unplugin-auto-import
 import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -29,7 +31,12 @@ export default defineConfig({
           lodash: [['default', '_']]
         }
       ],
-      dts: './src/types/auto-imports.d.ts'
+      dts: './src/types/auto-imports.d.ts',
+      resolvers: [ElementPlusResolver()]
+    }),
+    Components({
+      dts: './src/types/components.d.ts',
+      resolvers: [ElementPlusResolver()]
     })
   ],
   resolve: {

@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import VeeValidateView from '../views/VeeValidateView.vue'
 import PiniaView from '@/views/PiniaView.vue'
 import LoadashView from '@/views/LoadashView.vue'
+import ElementPlus from '@/views/ElementPlus.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,6 +35,11 @@ const router = createRouter({
       path: '/loadash',
       name: 'loadash',
       component: LoadashView
+    },
+    {
+      path: '/element_plus',
+      name: 'element_plus',
+      component: ElementPlus
     }
   ]
 })

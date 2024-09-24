@@ -16,6 +16,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/vee-validate">VeeValidate</RouterLink>
         <RouterLink to="/pinia">Pinia</RouterLink>
         <RouterLink to="/loadash">Loadash</RouterLink>
+        <RouterLink to="/element_plus">ElementPlus</RouterLink>
       </nav>
     </div>
   </header>
@@ -74,6 +75,7 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    background-color: black;
   }
 
   nav {
