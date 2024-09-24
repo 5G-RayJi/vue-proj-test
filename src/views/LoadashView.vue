@@ -31,6 +31,22 @@
       <span> = </span>
       <span class="value"> {{ difference.after }}</span>
     </div>
+    <!--random-->
+    <div id="random">
+      <p class="_title">[random]</p>
+      <span class="value" style="width: 100px"> {{ random.data }}</span>
+      <input
+        type="checkbox"
+        value="Float"
+        @change="
+          (v) => {
+            console.log(v.target.checked)
+            random.float = v.target.checked
+          }
+        "
+      />Float
+      <button @click="testRandom">Random</button>
+    </div>
   </div>
 </template>
 <script setup>
@@ -61,7 +77,14 @@ const difference = ref({
     return _.difference(difference.value.beforeA, difference.value.beforeB)
   })
 })
-
+//random----------------------------------------------
+const random = ref({
+  data: 5,
+  float: false
+})
+const testRandom = () => {
+  random.value.data = _.random(100, random.value.float)
+}
 onMounted(() => {})
 </script>
 <style scoped>
