@@ -13,6 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "element-plus": "^2.7.8",
     "lodash": "^4.17.21",
     "pinia": "^2.1.7",
     "unplugin-auto-import": "^0.18.3",
